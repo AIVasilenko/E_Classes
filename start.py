@@ -10,6 +10,7 @@ def mk_incr(n):
 def main():
     print(sys.version)
     cnf = FlConfig('config')
+    cnf.get_config()
     cnf.read_config()
     cnf.get_config()
     # seq1 = ['a', 'b', 'c', 'd', 'e']

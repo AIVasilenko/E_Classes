@@ -23,6 +23,9 @@ class FlConfig:
             print("%s: %s" % (nf.strerror, self.abspath))
 
     def get_config(self):
+        if len(AppConfig) == 0:
+            print("Empty config")
+            return
         for key in AppConfig.keys():
             print("%s --> %s" % (key, AppConfig.get(key)))
             # print("{} ==> {}".format(key, AppConfig.get(key)))
