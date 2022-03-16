@@ -13,14 +13,17 @@ def main():
     cnf.get_config()
     cnf.read_config()
     cnf.get_config()
-    # seq1 = ['a', 'b', 'c', 'd', 'e']
-    # seq2 = ['1', '2', '3', '5', '7']
-    # seq3 = ['8', '7', '6', '5', '4']
-    # pp = Parallel(seq1, seq2, seq3)
-    # # for x, y, z in Parallel(seq1, seq2, seq3):
-    # for x, y, z in pp:
-    #     print(x, y, z)
-    # print(pp[3])
+    seq1 = ['a', 'b', 'c', 'd', 'e']
+    seq2 = ['1', '2', '3', '5', '7']
+    seq3 = ['8', '7', '6', '5', '4']
+    pp = Parallel(seq1, seq2, seq3)
+    # for x, y, z in Parallel(seq1, seq2, seq3):
+    for x, y, z in pp:
+        print(x, y, z)
+    print(pp[3])
+    print(' **    ', list(zip(seq1, seq2, seq3)))
+    x ,y ,z = pp.getarg()
+    print(' ** zip', list(zip(x, y, z)))
 
 
 if __name__ == '__main__':
